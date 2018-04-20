@@ -33,8 +33,6 @@ require_once( NHYMXU_MARS_DIR . 'includes/product.php' );
 require_once( NHYMXU_MARS_DIR . 'includes/tweak.php' );
 require_once( NHYMXU_MARS_DIR . 'includes/api.php' );
 require_once( NHYMXU_MARS_DIR . 'includes/remote-notice.php' );
-require_once( NHYMXU_MARS_DIR . 'includes/class-tgm-plugin-activation.php' );
-require_once( NHYMXU_MARS_DIR . 'includes/plugin_install_list.php' );
 require_once( NHYMXU_MARS_DIR . 'includes/deeplink_shortcode.php' );
 
 function nhymxu_at_deeplink_shortcode( $atts, $content = null ) {
