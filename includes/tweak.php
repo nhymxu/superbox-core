@@ -36,23 +36,6 @@ function nhymxu_user_list_table_views($views){
 }
 add_filter("views_users", "nhymxu_user_list_table_views");
 
-function __nhymxu_block_caps( $caps, $cap )
-{
-    $user = wp_get_current_user();
-
-    if ( $user->ID != 1 ) {
-        if ( $cap === 'install_themes' ) {
-            $caps[] = 'do_not_allow';
-        }
-        /*if ( $cap === 'install_plugins' ) {
-            $caps[] = 'do_not_allow';
-        }*/
-    }
-
-    return $caps;
-}
-add_filter( 'map_meta_cap', '__nhymxu_block_caps', 10, 2 );
-
 /**
  * Add All Custom Post Types to search
  *
