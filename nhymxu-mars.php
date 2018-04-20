@@ -3,14 +3,14 @@
 Plugin Name: Mars system
 Plugin URI: https://dungnt.net/
 Description: Mars core plugin
-Version: 2.9.0
+Version: 3.0.0
 Author: Dũng Nguyễn (nhymxu)
 Author URI: https://dungnt.net/
 License: me
 */
 
 define('NHYMXU_MARS_DIR', __DIR__ . DIRECTORY_SEPARATOR );
-define('NHYMXU_MARS_VERSION', 20900);
+define('NHYMXU_MARS_VERSION', 30000);
 
 /**
  * Auto generate deeplink from accesstrade_userid
