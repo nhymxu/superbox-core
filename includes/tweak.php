@@ -64,21 +64,6 @@ function nhymxu_mars_add_cpts_to_search($query) {
 add_action( 'pre_get_posts', 'nhymxu_mars_add_cpts_to_search' );
 
 /*
- * Force enable maintenance
- * Using when need suspend website
- */
-add_action( 'init', function() {
-    if( file_exists( WP_CONTENT_DIR . '/suspend.php' ) ) {
-        header( 'HTTP/1.1 Service Unavailable', true, 503 );
-        header( 'Content-Type: text/html; charset=utf-8' );
-
-        require_once( WP_CONTENT_DIR . '/suspend.php' );
-
-        die();
-    }
-});
-
-/*
  * Prevent user change domain in admin
  */
 add_action( 'admin_head-options-general.php', function() {
