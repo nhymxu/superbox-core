@@ -64,33 +64,6 @@ function nhymxu_mars_add_cpts_to_search($query) {
 add_action( 'pre_get_posts', 'nhymxu_mars_add_cpts_to_search' );
 
 /*
- * Disable WordPress import/export tool
- */
-function nhymxu_mars_remove_ietool_menu()
-{
-    $user = wp_get_current_user();
-
-    if ( $user->ID != 1 ) {
-        remove_submenu_page( 'tools.php', 'export.php' );
-        remove_submenu_page( 'tools.php', 'import.php' );
-        remove_submenu_page( 'plugins.php', 'plugin-install.php' );
-    }
-}
-add_action( 'admin_menu', 'nhymxu_mars_remove_ietool_menu' );
-
-function nhymxu_prevent_url_iotool_access()
-{
-    $user = wp_get_current_user();
-
-    if ( $user->ID != 1 ) {
-        exit;
-    }
-}
-add_action( 'admin_head-export.php', 'nhymxu_prevent_url_iotool_access' );
-add_action( 'admin_head-import.php', 'nhymxu_prevent_url_iotool_access' );
-add_action( 'admin_head-plugin-install.php', 'nhymxu_prevent_url_iotool_access' );
-
-/*
  * Force enable maintenance
  * Using when need suspend website
  */
