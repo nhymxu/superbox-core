@@ -73,9 +73,6 @@ function nhymxu_mars_smarttag_enable() {
         return '';
 
     $utm_source = 'superbox';
-    if( file_exists( WP_CONTENT_DIR . '/svecom.txt' ) ) {
-        $utm_source = 'svecom';
-    }
     ?>
     <script type="text/javascript">
     var __atsmarttag = { pub_id: '<?=$at_userid;?>', utm_source: '<?=$utm_source;?>' };
