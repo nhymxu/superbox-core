@@ -63,16 +63,6 @@ function nhymxu_mars_add_cpts_to_search($query) {
 }
 add_action( 'pre_get_posts', 'nhymxu_mars_add_cpts_to_search' );
 
-function nhymxu_prevent_delete_specialpage($allcaps, $caps, $args) {
-    $page_front = get_option('page_on_front');
-    $page_blog = get_option('page_for_posts');
-    if ( isset( $args[0], $args[2] ) && ($args[2] == $page_front || $args[2] == $page_blog) && ($args[0] == 'delete_post' || $args[0] == 'trash_post') ) {
-        $allcaps[ $caps[0] ] = false;
-    }
-    return $allcaps;
-}
-add_filter ('user_has_cap', 'nhymxu_prevent_delete_specialpage', 10, 3);
-
 /**
  * Add Smart Tag to header
  */
