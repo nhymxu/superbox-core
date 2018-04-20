@@ -22,9 +22,6 @@ function nhymxu_generate_deeplink( $url ) {
 		return $url;
 
 	$utm_source = '&utm_source=superbox';
-	if( file_exists( WP_CONTENT_DIR . '/svecom.txt' ) ) {
-		$utm_source = '&utm_source=svecom';
-	}
 
 	return 'https://pub.accesstrade.vn/deep_link/'. $at_userid .'?url=' . rawurlencode( $url ) . $utm_source;
 }
