@@ -63,15 +63,6 @@ function nhymxu_mars_add_cpts_to_search($query) {
 }
 add_action( 'pre_get_posts', 'nhymxu_mars_add_cpts_to_search' );
 
-/*
- * Prevent user change domain in admin
- */
-add_action( 'admin_head-options-general.php', function() {
-    $domain = get_option( 'siteurl' );
-    define('WP_HOME', $domain);
-    define('WP_SITEURL', $domain);
-});
-
 add_action( 'admin_head-options-reading.php', function() {
     echo '<style>#front-static-pages{ display: none; }</style>';
 });
