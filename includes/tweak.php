@@ -63,21 +63,6 @@ function nhymxu_mars_add_cpts_to_search($query) {
 }
 add_action( 'pre_get_posts', 'nhymxu_mars_add_cpts_to_search' );
 
-add_action( 'admin_head-options-reading.php', function() {
-    echo '<style>#front-static-pages{ display: none; }</style>';
-});
-
-add_action( 'admin_head-plugins.php', function() {
-    echo '<style>div.wrap a.page-title-action{ display: none; }</style>';
-});
-
-function nhymxu_remove_customize_sfp( $wp_customize ) {
-    //All our sections, settings, and controls will be added here
-    $wp_customize->remove_section( 'static_front_page');
-
-}
-add_action( 'customize_register', 'nhymxu_remove_customize_sfp', 50 );
-
 function nhymxu_prevent_delete_specialpage($allcaps, $caps, $args) {
     $page_front = get_option('page_on_front');
     $page_blog = get_option('page_for_posts');
